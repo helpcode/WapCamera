@@ -9,12 +9,12 @@
 
 1: 普通js版本
 
-- 代码地址：[]()
-- 预览地址：[]()
+- 代码地址：[js/index.html](https://github.com/helpcode/WapCamera/blob/master/js/index.html)
+- 预览地址：[js/index.html](https://helpcode.github.io/WapCamera/js/)
 
 2: Vue版本
 
-- 代码地址：[]()
-- 预览地址：[]()
+- 代码地址：[vue/src/views/Home.vue](https://github.com/helpcode/WapCamera/blob/master/vue/src/views/Home.vue)
+- 预览地址：[vue/build/#/](https://helpcode.github.io/WapCamera/vue/build/#/)
 
 
