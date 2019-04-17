@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+<head>
+  <meta charset="utf-8">
+  <title>移动端唤醒相机拍照/图片预览/上传</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="booth">
+    <!-- 
+      accept="image/*" 规定上传文件的类型，只支持图片
+      capture="camera" 打开系统照相机进行拍照，触发
+      onchange事件
+
+      至于input是否好看，自己百度看如何美化...
+    -->
+    <input type="file" accept="image/*" onchange="getImageFile(event)" capture="camera">  
+    <img id='img' src=''>
+  </div>
+ 
+ 
+  <script>
+    function getImageFile (e) {
+      // FileReader 方法参考地址：https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader
+      let reader = new FileReader();
+
+      // readAsDataURL 方法参考地址：https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader/readAsDataURL
+      reader.readAsDataURL(e.target.files[0])
+      // 监听读取操作结束
+      reader.onloadend = function () {
+        // 取出base64代码
+        var dataURL = reader.result;
+        // 赋值到图片上显示出来
+        document.getElementById("img").src = dataURL
+      };
+    }
+  </script>
+</body>
+</html>
